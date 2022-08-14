@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: {{ geodatabase.dbname }}
+  POSTGRES_USER: {{ geodatabase.dbadmin }}
+  PGPASSWORD: {{ geodatabase.dbpw }}
+  POSTGRES_PASS: {{ geodatabase.dbpw }}
+  POSTGRES_DBNAME: {{ geodatabase.dbname }}
