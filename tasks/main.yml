@@ -4,6 +4,10 @@
   file:
     path: '{{ manifest_folder }}'
     state: directory
+- name: Ensure storage folder exists
+  file:
+    path: '{{ storage_base }}'
+    state: directory
 - name: Render Postrgres Configmap
   template:
     src: postgres_configmap.j2.yaml
